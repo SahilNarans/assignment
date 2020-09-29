@@ -1,0 +1,13 @@
+- name: Install helm chart
+  helm:
+    host: inventory_hostname
+    chart:
+      name: hello-world
+      version: 0.1.0
+      source:
+        type: repo
+        location: https://kubernetes-charts.storage.googleapis.com
+    state: installed
+    name: hello-world
+    namespace: default
+
